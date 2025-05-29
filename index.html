@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr Chuletón</title>
+    <link rel="stylesheet" href="styles.css">
+<body>
+
+  <!-- Bloque principal del sitio -->
+  <header id="inicio" class="site-header">
+    <div class="site-header__logo"></div>
+  </header>
+    <!-- Barra de navegación superior -->
+ <nav class="menu-bar">
+    <ul class="menu-bar__list">
+        <li class="menu-bar__item"><a class="menu-bar__link" href="#inicio">Inicio</a></li>
+        <li class="menu-bar__item"><a class="menu-bar__link" href="#about">¿Quiénes somos?</a></li>
+        <li class="menu-bar__item"><a class="menu-bar__link" href="#entradas">Entradas</a></li>
+        <li class="menu-bar__item"><a class="menu-bar__link" href="#platos-fuertes">Chuletones</a></li>
+        <li class="menu-bar__item"><a class="menu-bar__link" href="#postres">Postres</a></li>
+        <li class="menu-bar__item"><a class="menu-bar__link" href="#bebidas">Bebidas</a></li>
+    </ul>
+ </nav>
+
+  <!-- Sección de quienes somos -->
+  <section id="about" class="about">
+  <img src="fondoabout.jpg" alt="Fondo Mr. Chuletón" class="about__background">
+  <div class="about__overlay"></div> 
+  <div class="about__content">
+    <h2 class="about__title">¿Quiénes somos?</h2>
+    <p class="about__description">
+    Mr. Chuletón es un emblemático restaurante español que lleva más de 80 años deleitando los paladares más exigentes con los mejores chuletones y carnes del país. Fundado en el corazón de España en 1945, este templo gastronómico se ha convertido en una referencia obligada para los amantes de la buena carne. A lo largo de las décadas, Mr. Chuletón ha mantenido viva la tradición culinaria, combinando recetas ancestrales con técnicas de asado perfeccionadas con el tiempo. Su compromiso con la calidad, el sabor y el trato familiar han hecho de este restaurante un lugar legendario, donde cada corte es una experiencia y cada visita, un viaje al alma de la cocina española.
+    </p>
+    <div class="about__info">
+      <p><strong>Dirección:</strong> Calle 50 #45-67, Barcelona</p>
+      <p><strong>Horarios:</strong> Lunes a Domingo - 12:00 p.m. a 10:00 p.m.</p>
+    </div>
+    <p><strong>Redes Sociales:</strong></p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/Mrchuleton" target="_blank" aria-label="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+          <path d="M22.675 0h-21.35C.596 0 0 .596 0 1.325v21.351C0 23.404.596 24 1.325 24H12.82v-9.294H9.692V11.41h3.127V8.797c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.587l-.467 3.296h-3.12V24h6.116C23.404 24 24 23.404 24 22.676V1.325C24 .596 23.404 0 22.675 0z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/Mrchuleton" target="_blank" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.347 3.608 1.322.975.975 1.26 2.242 1.322 3.608.058 1.266.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.347 2.633-1.322 3.608-.975.975-2.242 1.26-3.608 1.322-1.266.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.347-3.608-1.322-.975-.975-1.26-2.242-1.322-3.608C2.175 15.797 2.163 15.418 2.163 12s.012-3.584.07-4.85c.062-1.366.347-2.633 1.322-3.608C4.53 2.58 5.797 2.295 7.163 2.233 8.429 2.175 8.808 2.163 12 2.163zm0-2.163C8.741 0 8.332.012 7.052.07 5.78.127 4.564.392 3.515 1.44 2.467 2.488 2.202 3.704 2.145 4.976.086 8.332 0 8.741 0 12s.012 3.668.07 4.948c.057 1.272.322 2.488 1.37 3.536 1.048 1.048 2.264 1.313 3.536 1.37C8.332 23.988 8.741 24 12 24s3.668-.012 4.948-.07c1.272-.057 2.488-.322 3.536-1.37 1.048-1.048 1.313-2.264 1.37-3.536.058-1.28.07-1.689.07-4.948s-.012-3.668-.07-4.948c-.057-1.272-.322-2.488-1.37-3.536-1.048-1.048-2.264-1.313-3.536-1.37C15.668.012 15.259 0 12 0z"/>
+          <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998z"/>
+          <circle cx="18.406" cy="5.594" r="1.44"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Menú principal con platos -->
+  <main class="menu">
+    
+    <!-- Entradas -->
+    <section id="entradas" class="menu-section">
+      <h2 class="menu-section__title">Entradas</h2>
+      <div class="menu-section__cards">
+        <article class="menu-card menu-card--entrada">
+          <img class="menu-card__image" src="entrada1.jpg" alt="Entrada 1">
+          <h3 class="menu-card__name">Croquetas</h3>
+          <p class="menu-card__description">Deliciosas croquetas de jamón iberico, cremosas por dentro y crocantes por fuera, salsa bechamel de la casa.</p>
+          <p class="menu-card__price"><strong>6 Euros</strong></p>
+        </article>
+         <article class="menu-card menu-card--entrada">
+          <img class="menu-card__image" src="entrada2.jpg" alt="Entrada 1">
+          <h3 class="menu-card__name">Tartar de buey ahumado</h3>
+          <p class="menu-card__description">Picado finamente a cuchillo, con yema de huevo curada, soya, salsa de la casa y especias frescas.</p>
+          <p class="menu-card__price"><strong>18 Euros</strong></p>
+        </article>
+         <article class="menu-card menu-card--entrada">
+          <img class="menu-card__image" src="entrada33.jpg" alt="Entrada 1">
+          <h3 class="menu-card__name">Salami de buey</h3>
+          <p class="menu-card__description">Proviene del lomo alto, con 20 días de maduracion y un toque ahumado de pimientos.</p>
+          <p class="menu-card__price"><strong>10 Euros und</strong></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Chuletones -->
+    <section id="platos-fuertes" class="menu-section">
+      <h2 class="menu-section__title">Chuletones y Más</h2>
+      <div class="menu-section__cards">
+        <article class="menu-card menu-card--fuerte">
+          <img class="menu-card__image" src="chuleton1.jpg" alt="Plato Fuerte 1">
+          <h3 class="menu-card__name">Chuletón de buey</h3>
+          <p class="menu-card__description">Raza gallega española, con 30 días de maduración, gran infiltración</p>
+          <p class="menu-card__price"><strong>80 Euros Kg</strong></p>
+        </article>
+        <article class="menu-card menu-card--fuerte">
+          <img class="menu-card__image" src="chuleton2.jpg" alt="Plato Fuerte 1">
+          <h3 class="menu-card__name">Chuletón de Vaca</h3>
+          <p class="menu-card__description">Raza portuguesa, con 40 días de maduración, ternecidad en su máxima expresión</p>
+          <p class="menu-card__price"><strong>60 Euros Kg</strong></p>
+        </article>
+        <article class="menu-card menu-card--fuerte">
+          <img class="menu-card__image" src="pescado1.jpg" alt="Plato Fuerte 1">
+          <h3 class="menu-card__name">Pez de Rey a la parrilla</h3>
+          <p class="menu-card__description">Pez fresco marinado con algnas especias y cocinado en parrilla, se sirve con porción de ensaladilla</p>
+          <p class="menu-card__price"><strong>50 Euros Und</strong></p>
+      </div>
+    </section>
+
+    <!-- Postres -->
+    <section id="postres" class="menu-section">
+      <h2 class="menu-section__title">Postres</h2>
+      <div class="menu-section__cards">
+        <article class="menu-card menu-card--postre">
+          <img class="menu-card__image" src="postre1.jpg" alt="Postre 1">
+          <h3 class="menu-card__name">Flan de coco</h3>
+          <p class="menu-card__description">Suave y cremoso flan con topping de caramelo.</p>
+          <p class="menu-card__price"><strong>20 Euros</strong></p>
+        </article>
+        <article class="menu-card menu-card--postre">
+          <img class="menu-card__image" src="postre2.jpg" alt="Postre 1">
+          <h3 class="menu-card__name">Tarta De Queso</h3>
+          <p class="menu-card__description">Integra 3 tipos de queso: filadelfia, mozzarela y queso ázul.</p>
+          <p class="menu-card__price"><strong>15 Euros</strong></p>
+        </article>
+        <article class="menu-card menu-card--postre">
+          <img class="menu-card__image" src="postre3.jpg" alt="Postre 1">
+          <h3 class="menu-card__name">Pai De Manzana Con Helado</h3>
+          <p class="menu-card__description">Es uno de los platos típicos de la casa, con la receta original de nuestro fundador, incluye helado de castañas.</p>
+          <p class="menu-card__price"><strong>25 Euros</strong></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Bebidas -->
+    <section id="bebidas" class="menu-section">
+      <h2 class="menu-section__title">Bebidas</h2>
+      <div class="menu-section__cards">
+        <article class="menu-card menu-card--bebida">
+          <img class="menu-card__image" src="bebida1.jpg" alt="Bebida 1">
+          <h3 class="menu-card__name">Limonada Natural</h3>
+          <p class="menu-card__description">Refrescante limonada con hierbabuena.</p>
+          <p class="menu-card__price"><strong>10 Euros</strong></p>
+        </article>
+        <article class="menu-card menu-card--bebida">
+          <img class="menu-card__image" src="bebida2.jpg" alt="Bebida 1">
+          <h3 class="menu-card__name">Botella de agua</h3>
+          <p class="menu-card__description">Agua mineral.</p>
+          <p class="menu-card__price"><strong>6 Euros</strong></p>
+        </article>
+        <article class="menu-card menu-card--bebida">
+          <img class="menu-card__image" src="bebida3.jpg" alt="Bebida 1">
+          <h3 class="menu-card__name">Vino De La Casa</h3>
+          <p class="menu-card__description">Producido por más de 50 años con uvas cultivadas en la misma granja.</p>
+          <p class="menu-card__price"><strong>30 Euros</strong></p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <p class="site-footer__text">© 2023 Mr. Chuletón. Todos los derechos reservados.</p>
+    <p class="site-footer__text">Diseñado por Brahiam Ruiz</p>
+  </footer>
+  <a href="#inicio" class="scroll-top" aria-label="Volver arriba">↑</a>
+</body>
+</html>
+
