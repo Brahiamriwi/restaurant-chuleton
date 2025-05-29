@@ -37,445 +37,448 @@
     --color-enlace-hover: darkblue;
   }
 }
-/* Desactivamos las animaciones en el caso de que el usuario haya configurado el modo sin animación */
+
+/* Desactivamos las animaciones si el usuario ha configurado el modo sin animación */
 @media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important; 
-    }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
-/* Reset del CSS general */
+/* Reset CSS */
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
 }
 
-/* Evitamos problemas con las imágenes, videos y figuras */
+/* Evitamos problemas con imágenes, videos y figuras */
 img, picture, video, iframe, figure {
-    max-width: 100%;
-    height: auto; 
-    display: block;
-    object-fit: cover;
-    object-position: center center;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
 }
 
 /* Reseteamos los enlaces para funcionar como cajas */
 a {
-    display: inline-block; 
-    text-decoration: none; 
+  display: inline-block;
+  text-decoration: none;
 }
 
 /* Excepto los que se encuentran en párrafos (vuelven a ser inline) */
 p a {
-    display: inline;
+  display: inline;
 }
 
 /* Quitamos los puntos de los <li> */
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 /* Configuramos anclas suaves */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1, h2, h3, h4, h5, h6, p, span, strong, blockquote, i, b, u, em {
-    font-size: 1em;
-    font-weight: inherit;
-    font-style: inherit;
-    text-decoration: none;
-    color: inherit;
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Evitamos problemas con los pseudoelementos de quotes */
 ::selection {
-    background-color: var(--color-primario);
-    color: var(--color-secundario);
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
 }
 
 /* Nivelamos problemas de tipografía y colocación de formularios */
 form, input, textarea, select, button, label {
-    font-family: inherit;
-    font-size: inherit;
-    hyphens: auto;
-    background-color: transparent;
-    display: block;
-    color: inherit;
-    appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+  appearance: none;
 }
 
 /* Reseteamos las tablas */
 table, tr, td {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Evitamos problemas con los SVG */
 svg {
-    width: 100%; 
-    display: block;
-    fill: currentColor;
+  width: 100%;
+  display: block;
+  fill: currentColor;
 }
 
 /* Configuramos la tipografía para toda la web */
 body {
-    min-height: 100vh;
-    font-size: 100%; 
-    font-family: var(--tipo-principal);
-    color: var(--color-texto); 
-    background-color: var(--fondo-primario); 
-    line-height: 1.6em; 
-    font-smooth: always;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-/* Evitamos problemas con los botones */
-button {
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    font: inherit;
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--color-texto);
+  background-color: var(--fondo-primario);
+  line-height: 1.6em;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* ====== Header ====== */
+/* Evitamos problemas con los botones */
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+}
+
 .site-header {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centrado para móvil */
-    padding: 3rem 1rem; /* Padding responsivo */
-    background-color: #2c0000;
-    background-image: url('logo2.jpg');
-    background-size: cover; /* Ajustado a 'cover' para que siempre cubra el área */
-    background-position: center center; /* Centrado inicial */
-    background-repeat: no-repeat;
-    border-bottom: 2px solid var(--fondo-secundario);
-    position: relative;
-    min-height: 50vh; /* Ajuste para móvil, menos alto */
-    overflow: hidden;
-    animation: movimientoFondo 20s ease-in-out infinite alternate; 
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrado para móvil */
+  padding: 30px 40px; /* Padding ajustado para móvil */
+  background-color: #2c0000;
+  background-image: url('logo2.jpg');
+  background-size: cover; /* Ajustado a 'cover' para que siempre cubra el área */
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid var(--fondo-secundario);
+  position: relative;
+  min-height: 30vh; /* Altura ajustada para móvil */
+  overflow: hidden;
+  animation: movimientoFondo 5s ease-in-out infinite alternate;
 }
 
 @keyframes movimientoFondo {
+  0% {
+    background-position: center top;
+    background-size: 90%; /* Tamaño inicial para móvil */
+  }
+  100% {
+    background-position: center bottom;
+    background-size: 90%; /* Tamaño final para móvil */
+  }
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    justify-content: flex-start; /* Vuelve a la izquierda para desktop */
+    padding: 3rem 0; /* Padding original para desktop */
+    min-height: 70vh; /* Altura ajustada para desktop */
+  }
+  @keyframes movimientoFondo {
     0% {
-        background-position: center top;
-        background-size: 70%; /* Tamaño inicial para móvil */
+      background-position: center top;
+      background-size: 60%; /* Tamaño original para desktop */
     }
     100% {
-        background-position: center bottom;
-        background-size: 70%; /* Tamaño final para móvil */
+      background-position: center bottom;
+      background-size: 60%; /* Tamaño original para desktop */
     }
+  }
 }
 
-/* Media Query para Header en pantallas más grandes */
-@media (min-width: 768px) {
-    .site-header {
-        justify-content: flex-start; /* Vuelve a la izquierda para desktop */
-        padding: 3rem 0rem; /* Padding original para desktop */
-        min-height: 90vh; /* Altura original para desktop */
-    }
-    @keyframes movimientoFondo {
-        0% {
-            background-position: center top;
-            background-size: 60%; /* Tamaño original para desktop */
-        }
-        100% {
-            background-position: center bottom;
-            background-size: 60%; /* Tamaño original para desktop */
-        }
-    }
-}
-
-/* ====== ABOUT ====== */
 .about {
-    position: relative;
-    width: 100%;
-    padding: 40px 20px;
-    font-family: var(--fuente-principal);
-    background-color: var(--fondo-secundario); 
-    overflow: hidden;
-    color: var(--color-blanco);
-    text-align: center; 
+  position: relative;
+  width: 100%;
+  padding: 30px 40px; /* Padding ajustado para móvil */
+  font-family: var(--fuente-principal);
+  background-color: var(--fondo-secundario);
+  overflow: hidden;
+  color: var(--color-blanco);
+  text-align: center;
 }
 
 .about__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 2;
-    opacity: 2; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* z-index ajustado para evitar superposición */
+  opacity: 0.8; /* Opacidad más baja para el fondo */
 }
 
 .about__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
 .about__content {
-    position: relative;
-    z-index: 5;
-    text-align: center; 
-    max-width: 800px; 
-    margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about__title {
-    font-size: 2.2rem; /* Tamaño para móvil */
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  font-size: 2rem; /* Tamaño ajustado para móvil */
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .about__description {
-    font-size: 1.1rem; /* Tamaño para móvil */
-    margin-bottom: 30px;
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 10px; 
-    border-radius: 15px;
+  font-size: 1rem; /* Tamaño ajustado para móvil */
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  border-radius: 10px;
 }
 
 .about__info p {
-    margin: 10px 0; /* Margen un poco más grande */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 8px; /* Padding más generoso */
-    border-radius: 15px;
+  margin: 8px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 6px;
+  border-radius: 10px;
 }
 
-/* Media Query para About en pantallas más grandes */
 @media (min-width: 768px) {
-    .about {
-        padding: 60px 40px; /* Más padding para desktop */
-    }
-    .about__title {
-        font-size: 3rem; /* Tamaño para desktop */
-    }
-    .about__description {
-        font-size: 1.3rem; /* Tamaño para desktop */
-    }
-    .about__info p {
-        font-size: 1.1rem;
-    }
+  .about {
+    padding: 60px 40px;
+  }
+  .about__title {
+    font-size: 3rem;
+  }
+  .about__description {
+    font-size: 1.3rem;
+  }
+  .about__info p {
+    font-size: 1.1rem;
+  }
 }
 
-/* ====== SOCIAL ICONS ====== */
 .social-icons {
   display: flex;
-  gap: 20px;
-  margin-top: 8px;
-  justify-content: center; /* Centrado de los iconos */
+  gap: 15px; /* Espacio ajustado */
+  margin-top: 15px; /* Margen ajustado */
+  justify-content: center;
 }
 
 .social-icons a svg {
-  width: 30px;
-  height: 30px;
+  width: 28px; /* Tamaño ajustado */
+  height: 28px; /* Tamaño ajustado */
   fill: white;
   transition: transform 0.3s ease, fill 0.3s ease;
-  display: inline-block; /* Asegura que los SVG se comporten como cajas */
-  vertical-align: middle; /* Alineación vertical */
-  margin: 0 auto; /* Centrado horizontal */
-  padding: 3px; /* Espacio alrededor del icono */
-  border-radius: 10%; /* Bordes redondeados para un efecto de botón */
-  background-color: var(--color-enlace); /* Fondo del icono */
+  display: block; /* Asegura que el SVG ocupe su propio espacio */
+  margin: 0 auto;
+  padding: 2px;
+  border-radius: 10%;
+  background-color: var(--color-enlace);
 }
 
 .social-icons a:hover svg {
-  transform: scale(1.5);
+  transform: scale(1.4); /* Escala ajustada */
   fill: #ccc;
-
 }
 
-/* ====== MENU ====== */
 .menu-section {
-    padding: 40px 15px; /* Padding ajustado para móvil */
-    background-color: var(--color-secundario);
+  padding: 30px 15px; /* Padding ajustado para móvil */
+  background-color: var(--color-secundario);
 }
 
 .menu-section__title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 30px;
-    color: var(--color-primario);
+  text-align: center;
+  font-size: 1.8rem; /* Tamaño ajustado para móvil */
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: var(--color-primario);
 }
 
 .menu-section__cards {
-    display: grid;
-    /* Por defecto, una columna para móvil */
-    grid-template-columns: 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px; /* Espacio ajustado */
 }
 
 .menu-card {
-    background-color: var(--fondo-primario);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  background-color: var(--fondo-primario);
+  padding: 12px; /* Padding ajustado */
+  border-radius: 8px; /* Borde ajustado */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Sombra ajustada */
+  transition: transform 0.3s ease;
 }
 
 .menu-card:hover {
-    transform: scale(1.03);
+  transform: scale(1.02); /* Escala ajustada */
 }
 
 .menu-card__image {
-    border-radius: 10px;
-    margin-bottom: 15px;
-    max-width: 100%;
-    height: 200px; /* Altura fija o variable según tu diseño */
-    display: block;
-    object-fit: cover;
+  border-radius: 8px; /* Borde ajustado */
+  margin-bottom: 12px; /* Margen ajustado */
+  max-width: 100%;
+  height: 180px; /* Altura ajustada para móvil */
+  display: block;
+  object-fit: cover;
 }
 
 .menu-card__name {
-    font-size: 1.4rem;
-    color: var(--color-enlace);
-    font-weight: 670;
-    margin-bottom: 10px;
+  font-size: 1.3rem; /* Tamaño ajustado para móvil */
+  color: var(--color-enlace);
+  font-weight: 670;
+  margin-bottom: 8px; /* Margen ajustado */
 }
 
 .menu-card__description {
-    font-size: 1rem;
-    margin-bottom: 10px;
+  font-size: 0.95rem; /* Tamaño ajustado para móvil */
+  margin-bottom: 8px; /* Margen ajustado */
 }
 
 .menu-card__price {
-    font-weight: bold;
-    color: var(--color-primario);
+  font-weight: bold;
+  color: var(--color-primario);
 }
 
-
-/* Media Query para Menu en pantallas más grandes */
 @media (min-width: 601px) {
-    .menu-section {
-        padding: 60px 20px; /* Más padding para desktop */
-    }
-    .menu-section__cards {
-        /* Dos columnas en tabletas */
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
+  .menu-section {
+    padding: 50px 20px;
+  }
+  .menu-section__title {
+    font-size: 2.5rem;
+  }
+  .menu-section__cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Min-width ajustado */
+    gap: 25px; /* Espacio ajustado */
+  }
+  .menu-card__image {
+    height: 220px; /* Altura para tablets/desktop */
+  }
+  .menu-card__name {
+    font-size: 1.5rem;
+  }
+  .menu-card__description {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 992px) {
-    .menu-section__cards {
-        /* Tres o más columnas en desktops */
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px; /* Un poco más de espacio */
-    }
+  .menu-section__cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Min-width ajustado */
+    gap: 30px;
+  }
 }
 
-/* ====== NAV BAR ====== */
 .menu-bar {
-    background-color: var(--color-secundario);
-    padding: 15px 20px;
-    font-family: var(--tipo-secundaria);
-    top: 0;
-    z-index: 800;
-    box-shadow: 0 4px 6px rgba(255, 3, 3, 0.2);
+  background-color: var(--color-secundario);
+  padding: 30px 60px; /* Padding ajustado para móvil */
+  font-family: var(--tipo-secundaria);
+  top: 0;
+  z-index: 800;
+  box-shadow: 0 2px 4px rgba(255, 3, 3, 0.2); /* Sombra ajustada */
 }
 
-/* Estilos por defecto (para móvil) */
 .menu-bar__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column; /* Vertical por defecto (móvil) */
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    gap: 10px; /* Menos espacio entre ítems en móvil */
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Vertical por defecto (móvil) */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 8px; /* Menos espacio entre ítems en móvil */
 }
 
 .menu-bar__item {
-    margin: 0;
-    width: 100%; /* Asegura que cada ítem ocupe el 100% del ancho disponible */
+  margin: 0;
+  width: 100%; /* Asegura que cada ítem ocupe el 100% del ancho disponible */
 }
 
 .menu-bar__link {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem; /* Tamaño de fuente ligeramente más pequeño para móvil */
-    padding: 10px 12px; /* Más padding vertical para botones táctiles */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    background-color: var(--color-enlace);
-    display: block; /* Ocupan todo el ancho por defecto (móvil) */
-    text-align: center;
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem; /* Tamaño de fuente ligeramente más pequeño para móvil */
+  padding: 5px 10px; /* Más padding vertical para botones táctiles */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  background-color: var(--color-enlace);
+  display: block;
+  text-align: center;
 }
 
 .menu-bar__link:hover,
 .menu-bar__link:focus {
-    background-color: var(--color-enlace-hover);
+  background-color: var(--color-enlace-hover);
 }
 
-/* --- Media Query para Desktop (pantallas más grandes) --- */
-@media (min-width: 601px) { 
-    .menu-bar__list {
-        flex-direction: row; /* Horizontal para desktop */
-        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-        justify-content: center;
-        gap: 20px; /* Más espacio entre ítems en desktop */
-    }
-    .menu-bar__item {
-        width: auto; /* El ancho se adapta al contenido */
-    }
-    .menu-bar__link {
-        display: inline-block; /* Vuelve a su tamaño normal */
-        font-size: 1.1rem; /* Tamaño de fuente original para desktop */
-        padding: 8px 12px; /* Padding original para desktop */
-    }
+@media (min-width: 601px) {
+  .menu-bar {
+    padding: 15px 20px; /* Padding para desktop */
+  }
+  .menu-bar__list {
+    flex-direction: row; /* Horizontal para desktop */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .menu-bar__item {
+    width: auto;
+  }
+  .menu-bar__link {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+  }
 }
 
-/* ====== FOOTER ====== */
 .site-footer {
-    background-color: var(--color-secundario);
-    color: var(--color-primario); /* Usa color-primario que es el texto principal */
-    padding: 20px 15px; /* Padding ajustado para móvil */
-    text-align: center;
-    font-family: var(--tipo-principal);
-    border-top: 2px solid var(--fondo-secundario);
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  padding: 15px 15px; /* Padding ajustado para móvil */
+  text-align: center;
+  font-family: var(--tipo-principal);
+  border-top: 2px solid var(--fondo-secundario);
 }
 
 .site-footer__text {
-    margin: 0;
-    font-size: 0.9rem; /* Tamaño de fuente para móvil */
+  margin: 0;
+  font-size: 0.85rem; /* Tamaño de fuente para móvil */
 }
 
-/* Media Query para Footer en pantallas más grandes */
 @media (min-width: 601px) {
-    .site-footer {
-        padding: 20px; /* Padding original para desktop */
-    }
-    .site-footer__text {
-        font-size: 1rem; /* Tamaño de fuente original para desktop */
-    }
+  .site-footer {
+    padding: 20px;
+  }
+  .site-footer__text {
+    font-size: 1rem;
+  }
 }
 
 .scroll-top {
   position: fixed;
-  bottom: 2rem;
-  right: 1.5rem;
+  bottom: 1.5rem; /* Posición ajustada */
+  right: 1rem; /* Posición ajustada */
   background-color: var(--color-blanco);
   color: rgb(139, 0, 0);
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 100%;
+  font-size: 1.8rem; /* Tamaño ajustado */
+  padding: 0.4rem 0.8rem; /* Padding ajustado */
+  border-radius: 50%; /* Asegura un círculo perfecto */
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra ajustada */
   z-index: 999;
-  display: block;
+  display: flex; /* Usar flex para centrar el icono si es necesario */
+  align-items: center;
+  justify-content: center;
+  width: 45px; /* Ancho fijo para mantener la forma circular */
+  height: 45px; /* Altura fija para mantener la forma circular */
 }
-
