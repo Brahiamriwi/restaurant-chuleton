@@ -195,7 +195,7 @@ button {
 .about {
   position: relative;
   width: 100%;
-  padding: 30px 40px; /* Padding ajustado para móvil */
+  padding: 30px 30px; /* Padding ajustado para móvil */
   font-family: var(--fuente-principal);
   background-color: var(--fondo-secundario);
   overflow: hidden;
