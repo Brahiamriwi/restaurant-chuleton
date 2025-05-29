@@ -471,7 +471,7 @@ button {
   background-color: var(--color-blanco);
   color: rgb(139, 0, 0);
   font-size: 1.8rem; /* Tamaño ajustado */
-  padding: 0.4rem 0.8rem; /* Padding ajustado */
+  padding: 0.4rem 1rem; /* Padding ajustado */
   border-radius: 50%; /* Asegura un círculo perfecto */
   text-decoration: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra ajustada */
